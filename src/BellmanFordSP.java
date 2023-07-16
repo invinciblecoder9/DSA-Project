@@ -221,7 +221,7 @@ public class BellmanFordSP {
     public static void main(String[] args)
     {
         PriorityQueue<Double> pq = new PriorityQueue<>();
-        double arr[] = new double[3];
+        double sums[] = new double[3];
         double sum1 = 0.0;
         In in = new In(args[0]);
         int s = Integer.parseInt(args[1]);
@@ -235,11 +235,12 @@ public class BellmanFordSP {
         {
             for (int v = 0; v < G.V(); v++) {
                 if (sp.hasPathTo(v)) {
-                    sum1 = sum1 + sp.distTo(v);
+                    sum1 += sp.distTo(v);
                 }
             }
         }
-        pq.add(sum1);
+        sums[0] = sum1;
+        // pq.add(sum1);
 
         double sum2 = 0.0;
         In in2 = new In(args[2]);
@@ -253,11 +254,12 @@ public class BellmanFordSP {
         } else {
             for (int v = 0; v < G2.V(); v++) {
                 if (sp2.hasPathTo(v)) {
-                    sum2 = sum2 + sp2.distTo(v);
+                    sum2 += sp2.distTo(v);
                 }
             }
         }
-        pq.add(sum2);
+        sums[1] = sum2;
+//        pq.add(sum2);
 
         double sum3 = 0.0;
         In in3 = new In(args[4]);
@@ -272,22 +274,24 @@ public class BellmanFordSP {
         {
             for (int v = 0; v < G3.V(); v++) {
                 if (sp3.hasPathTo(v)) {
-                    sum3 = sum3 + sp3.distTo(v);
+                    sum3 += sp3.distTo(v);
                 }
             }
         }
-        pq.add(sum3);
+        sums[2] = sum3;
+//        pq.add(sum3);
+
         System.out.println("Average: " + (sum1 + sum2 + sum3) / 3);  //average
-        int h = 0;
-        while(!pq.isEmpty())
-        {
-            arr[h] = pq.poll();
-            h++;
-        }
-        Arrays.sort(arr);
-        System.out.println("Median: " + arr[1]);    //median
-        System.out.println("Maximum: " + arr[2]);   //max
-        System.out.println("Minimum: " + arr[0]);   //min
+//        int h = 0;
+//        while(!pq.isEmpty())
+//        {
+//            arr[h] = pq.poll();
+//            h++;
+//        }
+        Arrays.sort(sums);
+        System.out.println("Median: " + sums[1]);    //median
+        System.out.println("Minimum: " + sums[0]);   //min
+        System.out.println("Maximum: " + sums[2]);   //max
     }
 }
 

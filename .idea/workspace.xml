@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e79a8f-4267-476b-9014-1de402e00d0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BellmanFordSP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DijkstraSP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/KruskalMST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrimMST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/file1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/file2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/file3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BellmanFordSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BellmanFordSP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +35,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Suryansh Ayush/IdeaProjects/DSAProject",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-20 (2)",
+    "last_opened_file_path": "C:/Users/Suryansh Ayush/Downloads/algs4.jar",
     "onboarding.tips.debug.path": "C:/Users/Suryansh Ayush/IdeaProjects/DSAProject/src/Main.java",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.DijkstraSP">
+  <component name="RunManager" selected="Application.BellmanFordSP">
     <configuration name="BellmanFordSP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BellmanFordSP" />
       <module name="DSAProject" />
@@ -65,8 +61,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DijkstraSP" />
         <item itemvalue="Application.BellmanFordSP" />
+        <item itemvalue="Application.DijkstraSP" />
       </list>
     </recent_temporary>
   </component>
@@ -80,16 +76,5 @@
       <updated>1689441178591</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
