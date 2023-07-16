@@ -152,39 +152,33 @@ public class PrimMST {
      */
     public static void main(String[] args) {
         double sum1 = 0.0;
-        double arr[] = new double[3];
-        PriorityQueue<Double> pq = new PriorityQueue<>();
+        double arr2[] = new double[3];
 
         In in = new In(args[0]);
         EdgeWeightedGraph G = new EdgeWeightedGraph(in);
         PrimMST mst = new PrimMST(G);
         sum1 = sum1+ mst.weight();
-        pq.add(sum1);
+        arr2[0] = sum1;
 
         double sum2 = 0.0;
         In in2 = new In(args[1]);
         EdgeWeightedGraph G2 = new EdgeWeightedGraph(in2);
         PrimMST mst2 = new PrimMST(G2);
         sum2 = sum2 + mst2.weight();
-        pq.add(sum2);
+        arr2[1] = sum2;
 
         double sum3 = 0.0;
         In in3 = new In(args[2]);
         EdgeWeightedGraph G3 = new EdgeWeightedGraph(in3);
         PrimMST mst3 = new PrimMST(G3);
         sum3 = sum3 + mst3.weight();
-        pq.add(sum3);
+        arr2[2] = sum3;
 
-        StdOut.printf("%f\n", (sum1 + sum2 + sum3)/3); //average
+        StdOut.printf("average : %f\n", (sum1 + sum2 + sum3)/3); //average
         int h = 0;
-        while(!pq.isEmpty())
-        {
-            arr[h] = pq.poll();
-            h++;
-        }
-        Arrays.sort(arr);
-        System.out.println(arr[0]); //min
-        System.out.println(arr[1]); //median
-        System.out.println(arr[2]); //max
+        Arrays.sort(arr2);
+        System.out.println("min : " + arr2[0]); //min
+        System.out.println("median : " + arr2[1]); //median
+        System.out.println("max : " + arr2[2]); //max
     }
 }

@@ -279,15 +279,8 @@ public class BellmanFordSP {
             }
         }
         sums[2] = sum3;
-//        pq.add(sum3);
 
         System.out.println("Average: " + (sum1 + sum2 + sum3) / 3);  //average
-//        int h = 0;
-//        while(!pq.isEmpty())
-//        {
-//            arr[h] = pq.poll();
-//            h++;
-//        }
         Arrays.sort(sums);
         System.out.println("Median: " + sums[1]);    //median
         System.out.println("Minimum: " + sums[0]);   //min

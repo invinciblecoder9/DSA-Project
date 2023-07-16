@@ -167,7 +167,6 @@ public class DijkstraSP {
     public static void main(String[] args) {
         double sum1 = 0.0;
         double arr[] = new double[3];
-        PriorityQueue<Double> pq = new PriorityQueue<>();
         In in = new In(args[0]);
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
         int s = Integer.parseInt(args[1]);
@@ -178,7 +177,7 @@ public class DijkstraSP {
                 sum1 = sum1 + sp.distTo(t);
             }
         }
-        pq.add(sum1);
+        arr[0] = sum1;
 
         double sum2 = 0.0;
         In in2 = new In(args[2]);
@@ -191,7 +190,7 @@ public class DijkstraSP {
                 sum2 = sum2 + sp2.distTo(t);
             }
         }
-        pq.add(sum2);
+        arr[1] = sum2;
 
         double sum3 = 0.0;
         In in3 = new In(args[4]);
@@ -204,17 +203,11 @@ public class DijkstraSP {
                 sum3 = sum3 + sp3.distTo(t);
             }
         }
-        pq.add(sum3);
-        int h = 0;
-        while(!pq.isEmpty())
-        {
-            arr[h] = pq.poll();
-            h++;
-        }
+        arr[2] = sum3;
         Arrays.sort(arr);
-        System.out.println(arr[1]); //median
-        System.out.println(arr[2]); //max
-        System.out.println(arr[0]);   //min
-        System.out.println((sum1 + sum2 + sum3)/3); //average
+        System.out.println("median : " + arr[1]); //median
+        System.out.println("max :" + arr[2]); //max
+        System.out.println("min : " + arr[0]);   //min
+        System.out.println("average : " + (sum1 + sum2 + sum3)/3); //average
     }
 }

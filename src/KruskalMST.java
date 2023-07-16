@@ -106,40 +106,35 @@ public class KruskalMST {
     }
 
     public static void main(String[] args) {
-        PriorityQueue<Double> pq = new PriorityQueue<>();
-        double arr[] = new double[3];
+        double sums2[] = new double[3];
         double sum1 =0.0;
         In in = new In(args[0]);
         EdgeWeightedGraph G = new EdgeWeightedGraph(in);
         KruskalMST mst = new KruskalMST(G);
         sum1 = sum1 + mst.weight();
-        pq.add(sum1);
+        sums2[0] = sum1;
 
         double sum2 =0.0;
         In in2 = new In(args[1]);
         EdgeWeightedGraph G2 = new EdgeWeightedGraph(in2);
         KruskalMST mst2 = new KruskalMST(G2);
         sum2 = sum2 + mst2.weight();
-        pq.add(sum2);
+        sums2[1] = sum2;
 
         double sum3 = 0.0;
         In in3 = new In(args[2]);
         EdgeWeightedGraph G3 = new EdgeWeightedGraph(in3);
         KruskalMST mst3 = new KruskalMST(G3);
         sum3 = sum3 + mst3.weight();
-        pq.add(sum3);
+        sums2[2] = sum3;
         int h = 0;
-        while(!pq.isEmpty())
-        {
-            arr[h] = pq.poll();
-            h++;
-        }
-        Arrays.sort(arr);
-        System.out.println(arr[0]); //min
-        System.out.println(arr[1]); //median
-        System.out.println(arr[2]); //max
 
-        StdOut.printf("%f\n", (sum1 + sum2 + sum3)/3); // average
+        Arrays.sort(sums2);
+        System.out.println("min : " + sums2[0]); //min
+        System.out.println("median : " + sums2[1]); //median
+        System.out.println("max : " + sums2[2]); //max
+
+        StdOut.printf("average : %f\n", (sum1 + sum2 + sum3)/3); // average
     }
 
 }
