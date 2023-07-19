@@ -174,7 +174,7 @@ public class DijkstraSP {
 
         for (int t = 0; t < G.V(); t++) {
             if (sp.hasPathTo(t)) {
-                sum1 = sum1 + sp.distTo(t);
+                sum1 += sp.distTo(t);
             }
         }
         arr[0] = sum1;
@@ -187,7 +187,7 @@ public class DijkstraSP {
 
         for (int t = 0; t < G2.V(); t++) {
             if (sp2.hasPathTo(t)) {
-                sum2 = sum2 + sp2.distTo(t);
+                sum2 += sp2.distTo(t);
             }
         }
         arr[1] = sum2;
@@ -200,7 +200,7 @@ public class DijkstraSP {
 
         for (int t = 0; t < G3.V(); t++) {
             if (sp3.hasPathTo(t)) {
-                sum3 = sum3 + sp3.distTo(t);
+                sum3 += sp3.distTo(t);
             }
         }
         arr[2] = sum3;
